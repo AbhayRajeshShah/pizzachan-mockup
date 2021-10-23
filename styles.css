@@ -95,7 +95,10 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: -4px -4px 10px  #696969;
+    box-shadow: -4px -4px 25px  #696969;
+}
+.feature:hover{
+    transform: scale(1.025);
 }
 .feature i{
     color: #2a60f7;
