@@ -15,6 +15,11 @@ observer.observe(document.querySelector(".imgs-abt img"))
 var nextbtn = document.getElementById("next");
 var prevbtn = document.getElementById("prev")
 var cards = document.querySelectorAll(".card")
+var ham = document.getElementById("ham");
+var navitem = document.querySelector(".navbar-items")
+ham.addEventListener("click",()=>{
+navitem.classList.toggle("ham-active")
+})
 var i=0;
 
 nextbtn.addEventListener(("click"),()=>{

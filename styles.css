@@ -24,9 +24,12 @@ body{
     left: 0;
     right: 0;
 }
+.contain .slice{
+    flex: 3;
+}
 .nav{
     background-color: rgba(82, 82, 82,20);
-    padding: 2rem;
+    /* padding: 2rem; */
     margin: 0;
     color: white;
     opacity: 0.65;
@@ -43,6 +46,8 @@ body{
     font-size: 1.5rem;
     letter-spacing: 8px;
     cursor: pointer;
+    align-self: center;
+
 }
 .navbar-brand a{
     color: white;
@@ -57,6 +62,7 @@ body{
     font-size: 1.25rem;
     letter-spacing: 4px;
     cursor: pointer;
+    margin: 0 2rem;
 }
 
 a{
@@ -64,13 +70,13 @@ a{
     color: white;
 }
 
-.intro-container p{
-    margin: 25vh 0;
+.slice{
     text-align: center;
     font-size: 3rem;
     letter-spacing: 4px;
     color: white;
     font-family: Karla;
+    margin: 25vh 0 0;
 }
 
 .features{
@@ -98,7 +104,7 @@ a{
     box-shadow: -4px -4px 25px  #696969;
 }
 .feature:hover{
-    transform: scale(1.025);
+    transform: scale(1.075);
 }
 .feature i{
     color: #2a60f7;
@@ -149,6 +155,9 @@ i.r{
 #about{
     padding: 2rem 0;
 }
+.about-content{
+    min-width: 450px;
+}
 .about *{
     flex: 1;
     text-align: center;
@@ -190,6 +199,7 @@ i.r{
     display: none;
     padding: 2rem 0;
     width: 100%;
+    text-align: center;
     border-radius: 1.25rem;
     font-size: 1.25rem;
     font-family: Cabin;
@@ -217,13 +227,14 @@ i.r{
     color: white;
 }
 .testimonial div{
-    flex: 1;
+    flex:1;
+    min-height: 175px;
 }
 .testimonial span{
-    flex: 0.5;
+    flex: 0.25
 }
 .testimonial span{
-    padding: 2rem;
+    padding: 1rem;
     font-size: 2rem;
 }
 .testimonial span:hover{
@@ -266,4 +277,51 @@ i.r{
 }
 .socials *:hover{
     cursor: pointer;
+    color: white;
 }
+.hamburger{
+    display: none;
+}
+.horizontal{
+    background-color: rgba(82, 82, 82,20);
+    padding: 2rem;
+    margin: 0;
+    color: white;
+    opacity: 0.65;   
+}
+
+
+@media only screen and (max-width:700px){
+.testimonial span{
+    flex: 0.20;
+}
+.nav{
+    transition: ease-in 2s;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#ham{
+    display: flex;
+}
+#ham:hover{
+    cursor: pointer;
+    color: #dadada;
+}
+.horizontal{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-items{
+    display: none;
+    flex-direction: column;
+}
+.ham-active{
+    opacity: 1;
+    scale: 1;
+    display: flex;
+}
+.item{
+    margin: 0.25rem;
+}
+}
+
