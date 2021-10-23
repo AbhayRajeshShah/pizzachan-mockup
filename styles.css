@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Cabin&family=Fira+Sans&family=Karla&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.intro-container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #0a0a0a;
+
+}
+.intro-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.50;
+}
+.contain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav{
+    background-color: rgba(82, 82, 82,20);
+    padding: 2rem;
+    margin: 0;
+    color: white;
+    opacity: 0.65;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+.nav *{
+    flex: 1;
+
+}
+.navbar-brand{
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+.navbar-brand a{
+    color: white;
+    font-weight: 700;
+}
+.navbar-items{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.item{
+    font-size: 1.25rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.intro-container p{
+    margin: 25vh 0;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: white;
+    font-family: Karla;
+}
+
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 2rem;
+    
+}
+.feature-title{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.feature{
+    height: 20rem;
+    width: 20rem;
+    margin: 2rem;
+    border-radius: 1.25rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px -4px 10px  #696969;
+}
+.feature i{
+    color: #2a60f7;
+    margin: 2rem;
+}
+.title{
+    text-align: center;
+}
+
+.section-title{
+    position: relative;
+    font-size: 2rem;
+    color: black;
+    font-weight: 300;
+}
+.section-title::after{
+    position: absolute !important;
+    right: 0;
+    left: 0;
+    bottom: -10px;
+    content: "";
+    width: 5rem;
+    height: 5px;
+    transition: width 0.5s;
+    background-color: #2a60f7;
+    margin: 0 auto;
+}
+.section-title:hover::after{
+    width: 10rem;
+}
+.contain-features{
+    background-color: #f1f6ff;
+    margin: 0;
+    padding: 2rem;
+}
+i.h{
+    color: #f7492a;
+}
+i.r{
+    color: #36ad1f;
+}
+.about{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+#about{
+    padding: 2rem 0;
+}
+.about *{
+    flex: 1;
+    text-align: center;
+}
+#sw-js-blob-svg{
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    z-index: -1;
+}
+.about img{
+    height: 30rem;
+    width: 30rem;
+}
+.abt p{
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 3rem;
+    line-height: 2rem;
+    color: #707070;
+    font-family: Cabin;
+    letter-spacing: 1px;
+}
+
+@keyframes animate{
+    0% {
+        transform: scale(0.5);
+        opacity:0;
+    }
+	100% {
+        transform: scale(1);
+        opacity:1;
+	}
+}
+.description-animate{
+    animation: animate 2s 1;
+}
+.card{
+    display: none;
+    padding: 2rem 0;
+    width: 100%;
+    border-radius: 1.25rem;
+    font-size: 1.25rem;
+    font-family: Cabin;
+    background-color: #f53252;
+    color: white;
+    /* position: absolute; */
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.active *{
+    animation: animate 2s 1;
+}
+.testimonials{
+    background-color: #f53252;
+    padding: 2rem;
+}
+
+.testimonial{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.testimonial div{
+    flex: 1;
+}
+.testimonial span{
+    flex: 0.5;
+}
+.testimonial span{
+    padding: 2rem;
+    font-size: 2rem;
+}
+.testimonial span:hover{
+    font-size: 3rem;
+    cursor: pointer;
+}
+#next{
+    text-align: right;
+}
+.trynow-section{
+    text-align: center;
+    padding: 2rem;
+}
+.trynow{
+    background-image: linear-gradient(90deg,#f53252,#a65ff8);
+    appearance: none;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1.25rem;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+.trynow:hover{
+    background-image: linear-gradient(90deg,#a65ff8,#f53252);
+    cursor: pointer;
+}
+
+#contact{
+    padding: 2rem;
+    background-color: #333333;
+    color: #dadada;
+}
+.socials{
+    text-align: center;
+}
+.socials *{
+    margin: 0 2rem;
+}
+.socials *:hover{
+    cursor: pointer;
+}
